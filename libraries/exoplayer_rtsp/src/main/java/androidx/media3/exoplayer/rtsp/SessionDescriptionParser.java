@@ -75,6 +75,7 @@ import java.util.regex.Pattern;
 
     // Lines are separated by an CRLF.
     for (String line : RtspMessageUtil.splitRtspMessageBody(sdpString)) {
+      line = line.trim();
       if ("".equals(line)) {
         continue;
       }
